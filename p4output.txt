@@ -1,1 +1,28 @@
-
+#include <stdio.h>
+void input_string(char a[20])
+{
+  scanf("%s",a);
+}
+void str_reverse(char a[20],char b[20])
+{
+  int x=0;
+  for(int i=0;a[i]!=0;i++)
+  {
+    x=x+1;
+  }
+  for(int i=0;i<x+1;i++)
+  {
+    b[i]=a[x-i-1];//add from front !!
+  }
+}
+void output(char a[20],char b[20])
+{
+  printf("the reverse of the string %s is %s",a,b);
+}
+int main()
+{
+  char a[20],b[20];
+  input_string(a);
+  str_reverse(a,b);
+  output(a,b);
+}
